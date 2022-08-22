@@ -33,3 +33,13 @@
 .filter > button:hover {
   background-color: var(--very-dark-grayish-cyan);
 }
+
+input.name {
+  border: unset;
+  width: 100px;
+  border-bottom: 1px solid var(--dark-grayish-cyan);
+}
+
+.icon-add {
+  transform: rotate(45deg);
+}

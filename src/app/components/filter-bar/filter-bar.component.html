@@ -5,4 +5,20 @@
       <img src="../../../assets/images/icon-remove.svg" alt="" />
     </button>
   </div>
+  <div class="filter add-filter">
+    <input
+      #filterName
+      class="name"
+      type="text"
+      name="filter-name"
+      placeholder="Filter"
+    />
+    <button (click)="addFilter(filterName.value)">
+      <img
+        class="icon-add"
+        src="../../../assets/images/icon-remove.svg"
+        alt=""
+      />
+    </button>
+  </div>
 </div>
