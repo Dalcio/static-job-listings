@@ -1,0 +1,28 @@
+<div class="card" *ngIf="job" [class]="(job.featured && 'featured') || ''">
+  <img [src]="job.logo" [alt]="job.company" class="logo" />
+  <div class="vertical w-100">
+    <div class="horizontal company">
+      <h3 class="company-name">{{ job.company }}</h3>
+      <div class="role new" *ngIf="job.new">NEW</div>
+      <div class="role featured" *ngIf="job.featured">Featured</div>
+    </div>
+    <div class="vertical">
+      <h2 class="position">{{ job.position }}</h2>
+      <div class="horizontal">
+        <div class="posted-dat">{{ job.postedAt }}</div>
+        <div class="contract">{{ job.contract }}</div>
+        <div class="location">{{ job.location }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="tags horizontal wrap">
+    <div class="tag role">{{ job.role }}</div>
+    <div class="tag level">{{ job.level }}</div>
+    <div class="tag" *ngFor="let language of job.languages">
+      {{ language }}
+    </div>
+    <div class="tag" *ngFor="let tool of job.tools">
+      {{ tool }}
+    </div>
+  </div>
+</div>

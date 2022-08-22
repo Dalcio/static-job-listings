@@ -1,0 +1,27 @@
+.container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  margin-top: 130px;
+  display: grid;
+  grid-template-areas: "none filter none2" "none jobs none2";
+  grid-template-columns: 1.5rem 1fr 1.5rem;
+  grid-template-rows: auto 1fr;
+  row-gap: 2rem;
+}
+
+app-filter-bar {
+  grid-area: filter;
+}
+
+.job-list {
+  grid-area: jobs;
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+  }
+}

@@ -1,0 +1,7 @@
+<app-header></app-header>
+<div class="container">
+  <app-filter-bar [onFilter]="onFilter"></app-filter-bar>
+  <div class="job-list">
+    <app-job-card *ngFor="let job of jobs" [job]="job"></app-job-card>
+  </div>
+</div>

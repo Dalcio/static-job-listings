@@ -1,0 +1,23 @@
+:root {
+  /** primary */
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  /** neutral */
+  --light-grayish-cyan-bg: hsl(180, 52%, 96%); /*(Background)*/
+  --light-grayish-cyan: hsl(180, 31%, 95%); /*(Filter Tablets)*/
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+  --bp-md: 375px;
+  --bp-lg: 1440px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 15px;
+  background-color: var(--light-grayish-cyan-bg);
+  padding-bottom: 2rem;
+}

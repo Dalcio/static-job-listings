@@ -1,0 +1,96 @@
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 2px 2px 8px 5px hsla(180, 14%, 20%, 0.33);
+  border-left: 5px solid transparent;
+  transition: border-left-color ease-in-out 250ms;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card.featured {
+  border-left-color: var(--desaturated-dark-cyan);
+}
+
+.horizontal {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.horizontal.wrap {
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.card > .horizontal:last-of-type {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.vertical {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.company-name {
+  color: var(--desaturated-dark-cyan);
+}
+
+.role {
+  padding: 0.5rem 0.8rem;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.role.new {
+  background-color: var(--desaturated-dark-cyan);
+}
+
+.role.featured {
+  background-color: var(--very-dark-grayish-cyan);
+}
+
+.position + .horizontal {
+  color: var(--dark-grayish-cyan);
+  column-gap: 0;
+}
+
+.position + .horizontal > *:not(:first-of-type):before {
+  content: "*";
+  margin: 0 1rem;
+}
+
+.tag {
+  color: var(--desaturated-dark-cyan);
+  background: var(--light-grayish-cyan-bg);
+  border-radius: 3px;
+  padding: 0.3rem 0.7rem;
+}
+
+@media screen and (max-width: 720px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-top: 50px;
+    padding-top: 60px;
+  }
+
+  .w-100 {
+    width: 100%;
+  }
+
+  .position + .horizontal {
+    border-bottom: 1px solid var(--dark-grayish-cyan);
+    padding-bottom: 1.3rem;
+  }
+
+  .logo {
+    position: absolute;
+    top: -50px;
+  }
+}

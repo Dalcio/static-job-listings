@@ -1,0 +1,8 @@
+<div class="filter-container">
+  <div class="filter" *ngFor="let filter of filters; let idx = index">
+    <div class="name">{{ filter }}</div>
+    <button (click)="removeFilter(idx)">
+      <img src="../../../assets/images/icon-remove.svg" alt="" />
+    </button>
+  </div>
+</div>
