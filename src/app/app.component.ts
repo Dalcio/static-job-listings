@@ -167,8 +167,10 @@ export class AppComponent {
       filters.forEach((filter) => {
         const temp = this.prJobs.filter(
           (job) =>
-            job.languages.map((j) => j.toLowerCase()).includes(filter) ||
-            job.tools.map((j) => j.toLowerCase()).includes(filter)
+            job.languages
+              .map((j) => j.toLowerCase())
+              .includes(filter.toLowerCase()) ||
+            job.tools.map((j) => j.toLowerCase()).includes(filter.toLowerCase())
         );
 
         if (temp.length > 0) {
